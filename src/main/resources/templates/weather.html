@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Weather</title>
+</head>
+<body>
+	<h3>Welcome</h3>	
+	<table border="1">
+		<tr>
+			<th>Date</th>
+			<th>City</th>
+			<th>Weather description</th>
+			<th>Temperature Celcius</th>
+			<th>Temperature Farenheit</th>
+			<th>Sunrise (GMT-5)</th>
+			<th>Sunset (GMT-5)</th>
+		</tr>
+		<tr>
+			<td th:text="${weatherDTO.date}" />
+			<td th:text="${weatherDTO.city}" />			
+			<td th:text="${weatherDTO.description}" />
+			<td th:text="${weatherDTO.temperatureCelcius}" />
+			<td th:text="${weatherDTO.temperatureFarenheit}" />
+			<td th:text="${weatherDTO.sunriseTime}" />
+			<td th:text="${weatherDTO.sunsetTime}" />			
+		</tr>
+	</table>
+</body>
+</html>
