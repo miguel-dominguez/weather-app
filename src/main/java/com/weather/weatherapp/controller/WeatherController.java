@@ -1,8 +1,9 @@
 package com.weather.weatherapp.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
+import com.weather.weatherapp.dto.WeatherDTO;
+import com.weather.weatherapp.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,10 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.weather.weatherapp.dto.WeatherDTO;
-import com.weather.weatherapp.model.WeatherData;
-import com.weather.weatherapp.service.WeatherService;
+import javax.servlet.http.HttpServletRequest;
 
+@RefreshScope
 @Controller
 public class WeatherController {
 
